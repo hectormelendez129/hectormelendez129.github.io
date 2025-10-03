@@ -237,11 +237,23 @@
 			<article id="about">
 				<h2 class="major">About</h2>
 				<span class="image main"><img src="images/collage.png" alt="" /></span>
-				<p>I’m a web developer with skills in JavaScript, HTML, CSS, and SQL, with growing experience in
-					full-stack development and database design. I build responsive, user-friendly applications that
-					focus on functionality and clean design. My background in the military taught me problem-solving
-					under pressure, teamwork, and adaptability—skills I bring to every project. I aim to create
-					reliable, scalable solutions while continuously improving my technical expertise. Check out some of
+				<p>I’m Hector Melendez, a military veteran and former Explosive Ordnance Disposal (EOD) Operations
+					Manager with over a decade of experience leading teams in high-pressure, complex, and austere
+					environments. While deployed to Afghanistan, I conducted joint operations with Polish Special
+					Forces, NATO allies, and Afghan commandos, developing my ability to solve high-stakes problems,
+					think strategically, and remain calm under pressure.
+				</p>
+				<p>Software Engineering captured me because it mirrors the challenges I thrived on in EOD: define the
+					end goal, analyze and mitigate risks, and develop dynamic solutions tailored to each scenario. Along
+					this journey, I’ve completed ethical hacking training with EC-Council, earned CompTIA Security+, and
+					built production websites for business leaders. I’m currently developing a Puerto Rican veterans
+					archive spanning WWI to the GWOT era.
+				</p>
+				<p>I bring mission-focused discipline, leadership, and hands-on training experience to software
+					engineering. I thrive on solving complex problems, mentoring others, and delivering practical
+					solutions. Every project is an opportunity to merge technical skill with creativity and deliver
+					impactful solutions.
+					Check out some of
 					my <a href="#work">awesome work</a>.</p>
 
 			</article>
@@ -249,7 +261,7 @@
 			<!-- Contact -->
 			<article id="contact">
 				<h2 class="major">Contact</h2>
-				<form method="post" action="#">
+				<form method="post" action="#" onsubmit="sendEmail(event)">
 					<div class="fields">
 						<div class="field half">
 							<label for="name">Name</label>
@@ -269,6 +281,25 @@
 						<li><input type="reset" value="Reset" /></li>
 					</ul>
 				</form>
+
+				<script>
+					function sendEmail(e) {
+						e.preventDefault();
+
+						const name = document.getElementById("name").value;
+						const email = document.getElementById("email").value;
+						const message = document.getElementById("message").value;
+
+						const subject = encodeURIComponent("New Contact Form Submission");
+						const body = encodeURIComponent(
+							`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+						);
+
+						// Replace with your email
+						window.location.href = `mailto:h.melee64@gmail.com?subject=${subject}&body=${body}`;
+					}
+				</script>
+
 
 				<ul class="icons">
 					<li><a href="https://x.com/hmelee129" target="_blank" rel="noopener noreferrer"
